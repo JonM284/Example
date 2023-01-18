@@ -1,51 +1,43 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Scripts.Runtime.LevelGeneration
 {
-    [RequireComponent(typeof(BoxCollider))]
     [DisallowMultipleComponent]
     public class DoorChecker: MonoBehaviour
     {
 
+        #region Nested Classes
+
+        [Serializable]
+        class WallObstructionTypes
+        {
+            public DoorType doorType;
+            public GameObject associatedObject;
+        }
+
+        #endregion
+
         #region Serialized Fields
 
         [SerializeField]
-        private BoxCollider _boxCollider;
-
-        #endregion
-
-        #region Private Fields
-
-        private bool _isObstructed;
-
-        private string _obstructionObjectTag;
-
-        #endregion
-
-        #region Accessors
-
-        public bool isObstructed => _isObstructed;
-
-        public string obstructionObjectTag => _obstructionObjectTag;
-
-        #endregion
-
-        #region Unity Events
-
-        private void OnTriggerEnter(Collider other)
-        {
-            _isObstructed = true;
-            _obstructionObjectTag = other.gameObject.tag;
-        }
+        private List<WallObstructionTypes> _wallObstructionTypesList = new List<WallObstructionTypes>();
 
         #endregion
 
         #region Class Implementation
 
-        public void CheckDoor()
+        //Turn on child object
+        public void AssignWallDoor(DoorType m_doorType)
         {
-            _boxCollider.enabled = true;
+            if (_wallObstructionTypesList.Count == 0)
+            {
+                Debug.LogError("No walls assigned");
+                return;
+            }
+            
+            _wallObstructionTypesList.ForEach(wot => wot.associatedObject.SetActive(wot.doorType == m_doorType));
         }
 
         #endregion
