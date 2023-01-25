@@ -4,5 +4,6 @@
     {
         DOOR,
         WALL,
+        DOORWAY,
     }
 }

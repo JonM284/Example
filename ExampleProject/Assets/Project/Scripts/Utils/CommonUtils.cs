@@ -24,6 +24,21 @@ namespace Project.Scripts.Utils
             return checkList.Where(c => c != null).ToList();
         }
 
+        public static List<T> ToList<T>(this IEnumerable<T> list)
+        {
+            var newList = new List<T>();
+            var enumerator = list.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                if (!(enumerator.Current is T item)) {
+                    continue;
+                }
+                newList.Add(item);
+            }
+
+            return newList;
+        }
+
         #endregion
         
         

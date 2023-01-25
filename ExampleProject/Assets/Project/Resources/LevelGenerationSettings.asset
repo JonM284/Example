@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d598ccc6b17349ea9d71c51d0cbd3c72, type: 3}
+  m_Name: LevelGenerationSettings
+  m_EditorClassIdentifier: 
+  roomByPercentages:
+  - percentage: 0.169
+    roomsByWeights:
+    - weight: 25
+      roomType: 0
+    - weight: 25
+      roomType: 1
+  - percentage: 0.413
+    roomsByWeights:
+    - weight: 6
+      roomType: 0
+    - weight: 50
+      roomType: 1
+    - weight: 25
+      roomType: 2
+  - percentage: 0.655
+    roomsByWeights:
+    - weight: 2
+      roomType: 0
+    - weight: 30
+      roomType: 1
+    - weight: 50
+      roomType: 2
+    - weight: 18
+      roomType: 3
+  - percentage: 0.831
+    roomsByWeights:
+    - weight: 25
+      roomType: 2
+    - weight: 50
+      roomType: 3
+  - percentage: 0.995
+    roomsByWeights:
+    - weight: 100
+      roomType: 3
+    - weight: 100
+      roomType: 3
+  defaultRoomByPercentage:
+    percentage: 0
+    roomsByWeights:
+    - weight: 100
+      roomType: 0
+    - weight: 100
+      roomType: 0

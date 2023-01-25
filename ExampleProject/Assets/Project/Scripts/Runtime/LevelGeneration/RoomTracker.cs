@@ -9,10 +9,12 @@ namespace Project.Scripts.Runtime.LevelGeneration
 
         #region Public Fields
 
-        public List<RoomChecker> _roomCheckers = new List<RoomChecker>();
+        public int level;
 
-        public List<DoorChecker> _doorCheckers = new List<DoorChecker>();
-
+        public RoomType roomType;
+        
+        public List<DoorChecker> doorCheckers = new List<DoorChecker>();
+        
         #endregion
 
     }

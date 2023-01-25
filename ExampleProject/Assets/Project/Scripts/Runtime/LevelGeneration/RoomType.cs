@@ -2,9 +2,10 @@
 {
     public enum RoomType
     {
-        ONE_DOOR,
-        TWO_DOOR,
-        THREE_DOOR,
-        FOUR_DOOR,
+        FOUR_DOOR = 0,
+        THREE_DOOR = 1,
+        TWO_DOOR = 2,
+        ONE_DOOR = 3,
+        
     }
 }

@@ -24,6 +24,18 @@ namespace Project.Scripts.Runtime.LevelGeneration
         [SerializeField]
         private List<WallObstructionTypes> _wallObstructionTypesList = new List<WallObstructionTypes>();
 
+        [SerializeField] private Transform _doorCheckPosition;
+        
+        [SerializeField] private Transform _associatedRoomCheckTransform;
+        
+        #endregion
+
+        #region Accessors
+
+        public Vector3 doorCheckPosition => _doorCheckPosition.position;
+
+        public Transform roomChecker => _associatedRoomCheckTransform;
+
         #endregion
 
         #region Class Implementation
