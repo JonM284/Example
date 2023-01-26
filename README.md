@@ -1,9 +1,9 @@
 # Example level generator
 Example level generator written by Jon Mendez
 
-Blue => Door
-Yellow => Wall
-Red => Connecting doorway
+Blue => Door <br />
+Yellow => Wall <br />
+Red => Connecting doorway <br />
 
 Video:
 
