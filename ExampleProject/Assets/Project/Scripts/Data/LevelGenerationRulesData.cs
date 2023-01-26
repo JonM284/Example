@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Project.Scripts.Runtime.LevelGeneration;
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.Search;
 
 namespace Project.Scripts.Data
 {
