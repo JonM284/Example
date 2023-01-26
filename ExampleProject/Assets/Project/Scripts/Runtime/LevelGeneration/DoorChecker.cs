@@ -52,6 +52,11 @@ namespace Project.Scripts.Runtime.LevelGeneration
             _wallObstructionTypesList.ForEach(wot => wot.associatedObject.SetActive(wot.doorType == m_doorType));
         }
 
+        public void ResetWalls()
+        {
+            _wallObstructionTypesList.ForEach(wot => wot.associatedObject.SetActive(false));
+        }
+
         #endregion
 
     }

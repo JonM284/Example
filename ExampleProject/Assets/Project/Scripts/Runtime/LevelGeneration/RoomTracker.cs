@@ -12,9 +12,34 @@ namespace Project.Scripts.Runtime.LevelGeneration
         public int level;
 
         public RoomType roomType;
+
+        public List<DoorChecker> modifiableDoorCheckers = new List<DoorChecker>();
+
+        #endregion
+
+        #region Serialized Fields
+
+        [SerializeField]
+        private List<DoorChecker> doorCheckers = new List<DoorChecker>();
+
+        #endregion
         
-        public List<DoorChecker> doorCheckers = new List<DoorChecker>();
-        
+        #region Class Implementation
+
+        public void ResetRoom()
+        {
+            level = 0;
+            roomType = RoomType.FOUR_DOOR;
+            doorCheckers.ForEach(dc =>
+            {
+                dc.ResetWalls();
+                if (!modifiableDoorCheckers.Contains(dc))
+                {
+                    modifiableDoorCheckers.Add(dc);
+                }
+            });
+        }
+
         #endregion
 
     }
