@@ -1605,15 +1605,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adbaa2bf073474298254dd575e215c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wallObstructionTypesList:
+  wallObstructionTypesList:
   - doorType: 0
     associatedObject: {fileID: 7027676799358143991}
   - doorType: 1
     associatedObject: {fileID: 7027676799271495096}
   - doorType: 2
     associatedObject: {fileID: 8892390274685012251}
-  _doorCheckPosition: {fileID: 7027676800193616810}
-  _associatedRoomCheckTransform: {fileID: 7027676799854013258}
+  doorCheckTransform: {fileID: 7027676800193616810}
+  associatedRoomCheckTransform: {fileID: 7027676799854013258}
 --- !u!1 &7027676799349207541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,15 +1663,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adbaa2bf073474298254dd575e215c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wallObstructionTypesList:
+  wallObstructionTypesList:
   - doorType: 0
     associatedObject: {fileID: 7027676800174689125}
   - doorType: 1
     associatedObject: {fileID: 7027676800688129410}
   - doorType: 2
     associatedObject: {fileID: 1580032462196773199}
-  _doorCheckPosition: {fileID: 7027676799669264075}
-  _associatedRoomCheckTransform: {fileID: 7027676800331844958}
+  doorCheckTransform: {fileID: 7027676799669264075}
+  associatedRoomCheckTransform: {fileID: 7027676800331844958}
 --- !u!1 &7027676799358143991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,15 +2174,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adbaa2bf073474298254dd575e215c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wallObstructionTypesList:
+  wallObstructionTypesList:
   - doorType: 0
     associatedObject: {fileID: 7027676799205320085}
   - doorType: 1
     associatedObject: {fileID: 7027676800454472283}
   - doorType: 2
     associatedObject: {fileID: 8325978824838553250}
-  _doorCheckPosition: {fileID: 7027676799233380748}
-  _associatedRoomCheckTransform: {fileID: 7027676801001832308}
+  doorCheckTransform: {fileID: 7027676799233380748}
+  associatedRoomCheckTransform: {fileID: 7027676801001832308}
 --- !u!1 &7027676799663380110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,15 +2779,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adbaa2bf073474298254dd575e215c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wallObstructionTypesList:
+  wallObstructionTypesList:
   - doorType: 0
     associatedObject: {fileID: 7027676800637011124}
   - doorType: 1
     associatedObject: {fileID: 7027676800169774546}
   - doorType: 2
     associatedObject: {fileID: 238099120173891960}
-  _doorCheckPosition: {fileID: 7027676799418348782}
-  _associatedRoomCheckTransform: {fileID: 7027676799126981959}
+  doorCheckTransform: {fileID: 7027676799418348782}
+  associatedRoomCheckTransform: {fileID: 7027676799126981959}
 --- !u!1 &7027676800169774546
 GameObject:
   m_ObjectHideFlags: 0

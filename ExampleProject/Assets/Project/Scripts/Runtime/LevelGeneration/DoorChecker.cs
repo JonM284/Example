@@ -22,39 +22,39 @@ namespace Project.Scripts.Runtime.LevelGeneration
         #region Serialized Fields
 
         [SerializeField]
-        private List<WallObstructionTypes> _wallObstructionTypesList = new List<WallObstructionTypes>();
+        private List<WallObstructionTypes> wallObstructionTypesList = new List<WallObstructionTypes>();
 
-        [SerializeField] private Transform _doorCheckPosition;
+        [SerializeField] private Transform doorCheckTransform;
         
-        [SerializeField] private Transform _associatedRoomCheckTransform;
+        [SerializeField] private Transform associatedRoomCheckTransform;
         
         #endregion
 
         #region Accessors
 
-        public Vector3 doorCheckPosition => _doorCheckPosition.position;
+        public Vector3 doorCheckPosition => doorCheckTransform.position;
 
-        public Transform roomChecker => _associatedRoomCheckTransform;
+        public Transform roomChecker => associatedRoomCheckTransform;
 
         #endregion
 
         #region Class Implementation
 
         //Turn on child object
-        public void AssignWallDoor(DoorType m_doorType)
+        public void AssignWallDoor(DoorType _doorType)
         {
-            if (_wallObstructionTypesList.Count == 0)
+            if (wallObstructionTypesList.Count == 0)
             {
                 Debug.LogError("No walls assigned");
                 return;
             }
             
-            _wallObstructionTypesList.ForEach(wot => wot.associatedObject.SetActive(wot.doorType == m_doorType));
+            wallObstructionTypesList.ForEach(wot => wot.associatedObject.SetActive(wot.doorType == _doorType));
         }
 
         public void ResetWalls()
         {
-            _wallObstructionTypesList.ForEach(wot => wot.associatedObject.SetActive(false));
+            wallObstructionTypesList.ForEach(wot => wot.associatedObject.SetActive(false));
         }
 
         #endregion
