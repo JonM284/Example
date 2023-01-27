@@ -116,9 +116,9 @@ namespace Project.Scripts.Runtime.LevelGeneration
 
             if (!startingRoom && roomPrefab)
             {
-                var newStartingRoom = roomPrefab.Clone(activeRoomPool);
-                var newStartingRoomTracker = newStartingRoom.GetComponent<RoomTracker>();
-                startingRoom = newStartingRoomTracker;
+                var _newStartingRoom = roomPrefab.Clone(activeRoomPool);
+                var _newStartingRoomTracker = _newStartingRoom.GetComponent<RoomTracker>();
+                startingRoom = _newStartingRoomTracker;
             }
 
             if (allRooms.Count > 0)
@@ -303,8 +303,8 @@ namespace Project.Scripts.Runtime.LevelGeneration
             //Walls face in towards parent room
             foreach (var currentRoomDoorChecker in _roomTracker.modifiableDoorCheckers)
             {
-                var dot = Vector3.Dot(currentRoomDoorChecker.transform.forward, _dirToCurrentRoom);
-                if (dot >= 0.9f)
+                var _dot = Vector3.Dot(currentRoomDoorChecker.transform.forward, _dirToCurrentRoom);
+                if (_dot >= 0.9f)
                 {
                     _connectedDoor = currentRoomDoorChecker;
                     break;
@@ -333,15 +333,15 @@ namespace Project.Scripts.Runtime.LevelGeneration
             }
 
             //Int from enum type will determine how many doors to remove
-            var m_roomTypeInt = (int)_roomTracker.roomType;
+            var _roomTypeInt = (int)_roomTracker.roomType;
 
             //Add random walls depending on room type
-            for (int i = 0; i < m_roomTypeInt; i++)
+            for (int i = 0; i < _roomTypeInt; i++)
             {
-                int m_randomInt = Random.Range(0, _roomTracker.modifiableDoorCheckers.Count);
-                var m_selectedDoor = _roomTracker.modifiableDoorCheckers[m_randomInt];
-                m_selectedDoor.AssignWallDoor(DoorType.WALL);
-                _roomTracker.modifiableDoorCheckers.Remove(m_selectedDoor);
+                int _randomInt = Random.Range(0, _roomTracker.modifiableDoorCheckers.Count);
+                var _selectedDoor = _roomTracker.modifiableDoorCheckers[_randomInt];
+                _selectedDoor.AssignWallDoor(DoorType.WALL);
+                _roomTracker.modifiableDoorCheckers.Remove(_selectedDoor);
             }
             
             m_isGeneratingRooms = false;
